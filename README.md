@@ -66,27 +66,7 @@ extension/
 
 See [extension/README.md](extension/README.md).
 
----
 
-## 🖼️ Screenshots
-
-| Login | Authenticator |
-|---|---|
-| ![Login](screenshots/login.png) | ![Authenticator](screenshots/authenticator.png) |
-
-| Passwords | Checkup |
-|---|---|
-| ![Passwords](screenshots/passwords.png) | ![Checkup](screenshots/checkup.png) |
-
-| Settings | Device Approval |
-|---|---|
-| ![Settings](screenshots/settings.png) | ![Device Approval](screenshots/device-approval.png) |
-
-| Autofill |
-|---|
-| ![Autofill](screenshots/autofill.png) |
-
-Replace placeholder screenshots with real mobile screenshots before public release.
 
 ---
 
