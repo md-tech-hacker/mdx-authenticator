@@ -1,16 +1,13 @@
-# Recovery — MDX Authenticator
+# Backup and restore
 
-Recovery options:
+Use Google sign-in with the original account to enable automatic encrypted
+Supabase backup and restore. Check Backup & Restore for the last verified save.
+Offline codes remain available when backup cannot connect.
 
-- Recovery codes
-- Trusted device approval
-- Encrypted vault backup file
+Older password-encrypted records require an existing device key or their
+previous password once. Google login cannot bypass that encryption. No new
+app password or recovery codes are created.
 
-If the user forgets the App Password and has no recovery method, the encrypted vault cannot be decrypted.
-
-## Recovery code rules
-
-- Each recovery code can be used once.
-- Codes are encrypted/hashed.
-- Used codes are marked and cannot be reused.
-- New recovery code sets can be generated from Settings after secure unlock.
+Independent encrypted files use their own backup-file password. Keep it
+separately. Install updates over the existing app and test restoration before
+uninstalling or replacing the phone. Device-only keys do not survive uninstall.

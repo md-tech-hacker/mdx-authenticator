@@ -1,85 +1,74 @@
 <div align="center">
 
-# 🔐 MDX Authenticator
+<img src="assets/logo.png" width="88" alt="MDX Authenticator app icon" />
 
-![MDX Authenticator](assets/banner.png)
+# MDX Authenticator
 
-**A secure authenticator, password vault, autofill, and encrypted sync companion.**
+A dedicated Android authenticator with fast offline codes, encrypted local
+storage, device authentication and optional encrypted Supabase backup.
 
-[![Status](https://img.shields.io/badge/status-active%20development-7c3aed?style=for-the-badge)](https://mdx-authenticator.app)
-[![Android](https://img.shields.io/badge/Android-APK-success?style=for-the-badge)](https://github.com/MD-TECH-HACKER/mdx-authenticator/releases/latest)
-[![Extension](https://img.shields.io/badge/Browser-Extension-blue?style=for-the-badge)](https://github.com/MD-TECH-HACKER/mdx-authenticator/releases/latest)
-[![Security](https://img.shields.io/badge/security-zero--knowledge-black?style=for-the-badge)](#security-model)
-[![Made by](https://img.shields.io/badge/made%20by-MD%20Tech%20Hacker-purple?style=for-the-badge)](https://github.com/MD-TECH-HACKER)
+[![Android](https://img.shields.io/badge/Android-Download_APK-22c55e?style=for-the-badge&logo=android&logoColor=white)](https://github.com/md-tech-hacker/mdx-authenticator/releases)
+[![Website](https://img.shields.io/badge/Website-mdx--authenticator.app-737CFF?style=for-the-badge)](https://mdx-authenticator.app)
+[![Offline](https://img.shields.io/badge/Codes-Work_Offline-0ea5e9?style=for-the-badge)](#features)
+
+[Features](#features) · [Security & recovery](#security-and-recovery) · [Support](https://mdx-authenticator.app/support)
 
 </div>
 
----
+## App preview
 
-## ✨ Overview
+<table>
+  <tr>
+    <th>Dark appearance</th>
+    <th>Light appearance</th>
+    <th>Account & settings</th>
+  </tr>
+  <tr>
+    <td><img src="assets/authenticator-dark.jpg" width="230" alt="Dark authenticator account list with transparent service icons and cloud status" /></td>
+    <td><img src="assets/authenticator-light.jpg" width="230" alt="Light authenticator account list" /></td>
+    <td><img src="assets/settings-dark.jpg" width="230" alt="Authenticator settings with Google account identity and App Lock" /></td>
+  </tr>
+</table>
 
-**MDX Authenticator** is a premium mobile-first security app for authenticator
-codes, password management, encrypted vault sync, password checkup, Android
-autofill, recovery codes, and browser autofill.
+*Screenshots use demo accounts. No real account setup keys are shown.*
 
-> Developed by **『⛥ 𝗠𝗗 𝗧𝗘𝗖𝗛 𝗛𝗔𝗖𝗞𝗘𝗥 ⛥』**
+This public repository contains product documentation and release information.
+Application source is maintained privately. The installed app is **Authenticator**.
 
-Website/domain: **[mdx-authenticator.app](https://mdx-authenticator.app)**
+## Features
 
-> This public repository is for download packages and release notes. The product source is private.
+| | What you get |
+| --- | --- |
+| **Instant codes** | Offline TOTP/HOTP, live countdowns and one-tap copy |
+| **Easy setup** | QR scanning, manual setup and 6/8-digit configurations |
+| **Your accounts** | Search, edit and organize accounts in custom folders |
+| **Device protection** | Optional biometric/PIN App Lock and fresh verification for setup keys and exports |
+| **Cloud backup** | Google sign-in with automatic encrypted Supabase backup and restore |
+| **Clear status** | Verified saves, syncing, pending changes and backup errors |
+| **Independent backup** | Portable encrypted files and authenticator transfer QR codes |
 
----
+Supports SHA1, SHA256 and SHA512. Service icons are bundled for offline use.
 
-## 🚀 Download
+## Security and recovery
 
-### 📱 Android APK
+Local accounts use AES-256-GCM and a device-only key protected by Android
+Keystore-backed storage. Code generation and account management work offline.
+No new app password or recovery codes are created.
 
-The latest Android APK is available in [GitHub Releases](https://github.com/MD-TECH-HACKER/mdx-authenticator/releases/latest).
+Optional cloud snapshots are encrypted before upload. Google sign-in identifies
+the account, owner rules isolate backups, and Supabase Vault protects the
+account-recoverable backup key. Authorized backend administrators can access
+this key; cloud backup is **not zero-knowledge encryption**.
 
-The installed app name is **Authenticator**. Internal package and protocol identifiers remain MDX-based.
+Older encrypted accounts may require their previous password once for migration.
+Google sign-in cannot bypass their original encryption when the old key is lost.
+Install updates over the existing app. Verify backups and test restoration
+before uninstalling or replacing a phone: device-only local keys do not survive
+an uninstall.
 
-### 🧩 Browser Extension
+Historical releases may contain retired features. See the release notes for the
+features included in each APK; this repository now presents the Authenticator app.
 
-The obfuscated browser extension ZIP is available in [GitHub Releases](https://github.com/MD-TECH-HACKER/mdx-authenticator/releases/latest).
+Do not post setup keys, QR codes, session tokens or backup-file passwords in issues.
 
-1. Download `mdx-authenticator-extension.zip` and extract it.
-2. Open `chrome://extensions`.
-3. Turn on **Developer mode**.
-4. Select **Load unpacked** and choose the extracted folder.
-5. Open the extension popup and choose **Connect Extension**.
-
----
-
-## 🌟 Core Features
-
-| Category | Features |
-|---|---|
-| 🔢 Authenticator | TOTP, HOTP, SHA1/SHA256/SHA512, 6/8 digit codes, QR scan, manual setup key, live countdown |
-| 🔐 Password Vault | Encrypted passwords, custom fields, notes, recovery codes, folders, tags, strong password generator |
-| 🧪 Checkup | Weak password scan, reused password scan, old password warnings, leaked password check |
-| 📲 Autofill | Android Autofill Service, password save prompt, update prompt, biometric before fill |
-| 🛡️ Security | App Password, biometric unlock, secure clipboard, screenshot protection, encrypted vault data |
-| ☁️ Cloud Sync | Encrypted Supabase sync, offline queue, sync status, profile and device separation |
-| 🧑‍💻 Browser Extension | Chrome Manifest V3, secure Google connection, local unlock, autofill and save prompts |
-
----
-
-## 🔐 Security Model
-
-- Google login is used only for identity.
-- App Password is used locally to unlock and decrypt the vault.
-- Passwords, OTP secrets, recovery codes, and App Passwords are never uploaded as plaintext.
-- Supabase stores encrypted vault data and row-level security isolates each account.
-- The website is a landing page and connection API only. There is no web vault or web dashboard.
-
----
-
-## 🆘 Support
-
-Visit [mdx-authenticator.app/support](https://mdx-authenticator.app/support).
-
-Do not send passwords, App Passwords, recovery codes, session tokens, or vault screenshots in issues.
-
-<div align="center">
-  <sub>🔐 MDX Authenticator • 『⛥ 𝗠𝗗 𝗧𝗘𝗖𝗛 𝗛𝗔𝗖𝗞𝗘𝗥 ⛥』</sub>
-</div>
+Built by MD Tech Hacker.

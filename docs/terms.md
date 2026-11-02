@@ -1,5 +1,8 @@
-# Terms of Service — MDX Authenticator
+# Terms
 
-By using MDX Authenticator, you agree to use the app responsibly to protect your accounts and credentials.
+Read [the current terms](https://mdx-authenticator.app/terms) before using
+Authenticator. Protect your device and Google account, verify account setup,
+and keep tested backups before replacing or uninstalling the app. Older
+encrypted records may be unrecoverable without their previous key or password.
 
-The app is provided as-is unless otherwise stated in a separate agreement.
+Do not use the app to access accounts or data you are not authorized to hold.

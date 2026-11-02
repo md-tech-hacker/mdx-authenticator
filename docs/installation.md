@@ -1,15 +1,11 @@
-# Installation — MDX Authenticator
+# Install Authenticator
 
-## Android APK
+1. Download the Android APK from the official release page.
+2. Install it over the existing app when upgrading. Do not uninstall first.
+3. Open Authenticator and choose Google sign-in for Supabase backup, or continue offline.
+4. Scan a setup QR code or add an account manually.
+5. Enable App Lock if desired; it uses your device authentication.
 
-1. Download the latest APK from GitHub Releases.
-2. Install it on your Android device.
-3. Open MDX Authenticator.
-4. Continue with Google.
-5. Create your App Password.
-6. Save your recovery codes.
-7. Enable biometric unlock and security settings.
-
-## Browser Extension
-
-Extension release instructions will be added after the extension package is published.
+No extra app password or recovery-code setup is required. Older encrypted
+accounts may need the previous password once during migration. Verify a backup
+and test restoration before uninstalling or replacing your device.

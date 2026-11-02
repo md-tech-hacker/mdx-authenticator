@@ -1,35 +1,14 @@
-# Security — MDX Authenticator
+# Security
 
-MDX Authenticator is designed with a zero-knowledge vault model.
+Authenticator stores accounts locally using AES-256-GCM with a device-only key
+protected by Android Keystore-backed storage. Optional App Lock uses strong
+biometrics or the device PIN, pattern or password. Setup-key disclosure and
+account export require fresh device verification.
 
-## Core rules
+Optional Supabase snapshots are encrypted before upload. Google sign-in
+identifies the owner; access rules isolate account backups. Supabase Vault
+protects an account-recoverable cloud key. Authorized backend administrators
+can access it: cloud backup is not zero-knowledge encryption.
 
-- App Password is never stored as plaintext.
-- Passwords are encrypted before cloud sync.
-- OTP secrets are encrypted before cloud sync.
-- Recovery codes are encrypted.
-- Supabase stores encrypted blobs only.
-- Decryption happens on the client after unlock.
-
-## Sensitive actions
-
-Require App Password or biometric:
-
-- Reveal password
-- Copy password
-- Show authenticator setup key
-- Export vault
-- Delete item
-- Reset vault
-- Approve new device
-
-## Device security
-
-Planned protections:
-
-- Screenshot blocking
-- Recent app preview hiding
-- Auto-lock on background
-- Secure clipboard clearing
-- Rooted device protection
-- Trusted device approval
+See [the current security model](https://mdx-authenticator.app/security).
+Never include setup keys, QR codes or tokens in vulnerability reports.

@@ -1,18 +1,10 @@
-# Privacy Policy — MDX Authenticator
+# Privacy
 
-MDX Authenticator is designed to protect passwords, authenticator codes, recovery codes, and vault data.
+Local code generation and account searching work offline. Optional Google login
+provides identity, name, email and profile photo for encrypted Supabase backup.
+Cloud snapshots are encrypted before upload; owner rules isolate backups.
+Supabase Vault protects the recoverable cloud key, accessible to authorized
+backend administrators. This is not zero-knowledge cloud storage.
 
-## Data handling
-
-Sensitive data must be encrypted before sync.
-
-The app must not upload plaintext:
-- Passwords
-- OTP secrets
-- Recovery codes
-- App Password
-- Vault keys
-
-## Developer
-
-Developed by 『⛥ 𝗠𝗗 𝗧𝗘𝗖𝗛 𝗛𝗔𝗖𝗞𝗘𝗥 ⛥』.
+Read [the current privacy policy](https://mdx-authenticator.app/privacy).
+Support messages must not contain setup keys, QR codes, tokens or backup passwords.
