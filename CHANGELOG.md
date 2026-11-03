@@ -2,6 +2,15 @@
 
 All notable changes to MDX Authenticator will be documented here.
 
+## Android build 24 — custom website icon fix
+
+- Fixed icon lookup for custom websites, including mdx-server.me, by using the full normalized HTTPS site address.
+- Clearing a website URL clears its saved domain; replacing it does not retain another website's cached icon.
+- Icon sizes, bundled logos and offline caching are retained.
+- 246 mobile tests, TypeScript and GitHub CI pass. Release signing and package checks pass; physical Android upgrade and biometric tests remain unperformed.
+- Download [Android build 24](https://github.com/md-tech-hacker/mdx-authenticator/releases/tag/v1.0.0-build24). Older APK assets have been retired from public downloads.
+
+
 ## Android build 23 — website icons and sidebar
 
 - Unfamiliar website links can retrieve a favicon and save it locally for offline reuse.
