@@ -2,7 +2,7 @@
 
 All notable changes to MDX Authenticator will be documented here.
 
-## Next Android build — website icons and sidebar
+## Android build 23 — website icons and sidebar
 
 - Unfamiliar website links can retrieve a favicon and save it locally for offline reuse.
 - Known service icons remain bundled; icon downloads never block access to codes.
@@ -10,7 +10,7 @@ All notable changes to MDX Authenticator will be documented here.
 - Website icon lookup sends only the public hostname to Google's favicon service;
   see the [privacy policy](https://mdx-authenticator.app/privacy).
 - Source validation: 245 mobile tests, TypeScript and Android Hermes export pass.
-- These changes belong to production build 23. Earlier APK downloads do not include them.
+- Download [Android build 23](https://github.com/md-tech-hacker/mdx-authenticator/releases/tag/v1.0.0-build23). Earlier APK downloads do not include these changes.
 
 ## Authenticator-only update — 2026-11-02
 
@@ -24,3 +24,4 @@ All notable changes to MDX Authenticator will be documented here.
 
 Initial release history is preserved in Git tags. Use the current documentation
 and each APK's release notes when installing or upgrading.
+
